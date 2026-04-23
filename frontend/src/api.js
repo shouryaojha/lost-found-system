@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// Base API URL — points to your Express backend
+// Base API URL — uses env variable in production, localhost in development
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
 });
 
 // Automatically attach JWT token to every request (if logged in)
