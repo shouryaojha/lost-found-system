@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// Base API URL — uses env variable in production, localhost in development
+// Base API URL — points to deployed backend on Render
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+  baseURL: "https://lost-found-system-k7ga.onrender.com/api",
 });
 
 // Automatically attach JWT token to every request (if logged in)
